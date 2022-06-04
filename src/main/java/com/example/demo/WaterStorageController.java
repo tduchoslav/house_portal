@@ -6,8 +6,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WaterStorageController {
 
+	@GetMapping("/")
+	public String index() {
+		return "Aplikace bezi..., default endpoint.";
+	}
+	
 	@GetMapping("/heartbeat")
-	  boolean heartbeat() {
-	    return true;
-	  }
+	public boolean heartbeat() {
+		return true;
+	}
+	
+	
 }
